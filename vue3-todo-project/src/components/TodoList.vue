@@ -23,7 +23,12 @@
 
 <script>
 export default {
-  props: ["todos"],
+  props: {
+    todos: {
+      type: Array,
+      require: true
+    }
+  },
   emits: ['toggle-todo', 'delete-todo'],
   setup(props, { emit }) {
     const toggleTodo = (index) => {
