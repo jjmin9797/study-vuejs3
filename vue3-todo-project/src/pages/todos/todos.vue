@@ -20,9 +20,12 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li v-if="currentPage !== 1" class="page-item">
-          <a style="cursur: pointer" 
-          @click="getTodos(currentPage - 1)" 
-          class="page-link">Previous</a>
+          <a
+            style="cursur: pointer"
+            @click="getTodos(currentPage - 1)"
+            class="page-link"
+            >Previous</a
+          >
         </li>
         <li
           v-for="page in numberOfPages"
@@ -34,31 +37,61 @@
           <a style="cursur: pointer" class="page-link" href="#">{{ page }}</a>
         </li>
         <li v-if="currentPage !== numberOfPages" class="page-item">
-          <a style="cursur: pointer" @click="getTodos(currentPage + 1)" class="page-link" href="#"
-            >Next</a>
+          <a
+            style="cursur: pointer"
+            @click="getTodos(currentPage + 1)"
+            class="page-link"
+            href="#"
+            >Next</a
+          >
         </li>
       </ul>
     </nav>
   </div>
+  <Toast v-if="showToast" :message="toastMessage" :type="toastAlertType" />
 </template>
 
 <script>
-import { ref, computed, watchEffect, watch } from "vue";
+import { ref, computed, watchEffect, watch, onUnmounted } from "vue";
 import TodoSimpleForm from "@/components/TodoSimpleForm.vue";
 import TodoList from "@/components/TodoList.vue";
 import axios from "axios";
-
+import Toast from "@/components/Toast.vue";
+import { useToast } from '@/composables/toast.js';
 export default {
-  components: { TodoSimpleForm, TodoList },
+  components: { TodoSimpleForm, TodoList, Toast },
 
   setup() {
+    onUnmounted(() => {
+      clearTimeout(toastTimeout.value);
+    });
+
     const todos = ref([]);
     const errorMessage = ref("");
     const numberOfTodos = ref(0);
     const limit = 5;
     const currentPage = ref(1);
     const searchText = ref("");
-
+    const {
+        toastMessage,
+        toastAlertType,
+        showToast,
+        tiggerToast,
+    } = useToast();
+    // const showToast = ref(false);
+    // const toastMessage = ref("");
+    // const toastAlertType = ref("");
+    // const toastTimeout = ref(null);
+    // const tiggerToast = (message, type = "success") => {
+    //   toastMessage.value = message;
+    //   toastAlertType.value = type;
+    //   showToast.value = true;
+    //   toastTimeout.value = setTimeout(() => {
+    //     toastMessage.value = "";
+    //     toastAlertType.value = "";
+    //     showToast.value = false;
+    //   }, 3000);
+    // };
     watchEffect(() => {
       console.log(currentPage.value);
     });
@@ -77,6 +110,7 @@ export default {
         todos.value = res.data;
       } catch (err) {
         console.log(err);
+        tiggerToast("Something went wrong.","danger")
         errorMessage.value = "Something went wrong.";
       }
     };
@@ -106,9 +140,10 @@ export default {
       } catch (err) {
         console.log(err);
         errorMessage.value = "네트워크 오류";
+        tiggerToast("Something went wrong.","danger")
       }
     };
-    const toggleTodo = async (index,checked) => {
+    const toggleTodo = async (index, checked) => {
       const id = todos.value[index].id;
       try {
         await axios.patch("http://localhost:3000/todos/" + id, {
@@ -117,6 +152,7 @@ export default {
         todos.value[index].completed = checked;
       } catch (err) {
         console.log(err);
+        tiggerToast("Something went wrong.","danger")
       }
     };
 
@@ -129,7 +165,7 @@ export default {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         getTodos(1);
-      },1000);
+      }, 1000);
     });
     // const filteredTodos = computed(() => {
     //   if (searchText.value) {
@@ -152,6 +188,9 @@ export default {
       currentPage,
       getTodos,
       searchTodo,
+      showToast,
+      toastAlertType,
+      toastMessage,
     };
   },
 };

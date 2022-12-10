@@ -1,0 +1,106 @@
+<template>
+  <header class="header-section header-section-fixed header-section-transparent header-section-transparent-light">
+                    <!-- Header section container -->
+                    <div class="header-section-container">
+
+
+                        <!-- Header menu section -->
+                        <div class="header-menu-section">
+                            <!-- Header menu section container -->
+                            <div class="header-menu-section-container">
+                                <!-- Navbar -->
+                                <nav class="navbar navbar-expand-lg">
+
+
+                                    <!-- container -->
+                                    <div class="container gx-4">
+
+
+                                        <!-- Logo -->
+                                        <a class="navbar-brand" href="index.html" title="Bason">
+                                            <h4 class="font-weight-900 transparent" style="color: white">COMO YOON</h4>
+                                            <h4 class="font-weight-900 normal center" style="color: black">COMO YOON</h4>
+                                        </a><!-- /End Logo -->
+
+
+                                        <!-- Toggler button -->
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-wd">MENU</span>
+                                            <span class="navbar-toggler-lines-wrapper">
+                                                <i class="navbar-toggler-line navbar-toggler-line-top"></i>
+                                                <i class="navbar-toggler-line navbar-toggler-line-middle"></i>
+                                                <i class="navbar-toggler-line navbar-toggler-line-bottom"></i>
+                                            </span>
+                                        </button><!-- /End Toggler button -->
+                                        <!-- Header menu (Desktop) -->
+                                        <div class="header-menu desktop-menu navbar-collapse">
+                                            <!-- Header menu links -->
+                                            <ul class="navbar-nav ms-auto">
+                                                <!-- Home -->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="index.html"><span>HOME</span></a>
+                                                </li>
+                                                <!-- Portfolio -->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><span>ABOUT US</span></a>
+                                                </li>
+
+
+                                                <!-- Shop -->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><span>PROMOTION</span></a>
+                                                </li>
+
+
+                                                <!-- Blog -->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><span>FLOWER</span></a>
+                                                </li>
+
+
+                                                <!-- Pages -->
+                                                <li class="nav-item megamenu">
+                                                    <a class="nav-link" href="#"><span>PRODUCT</span></a>
+                                                </li>
+
+
+                                                <!-- Features -->
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><span>STORE</span></a>
+                                                </li>
+
+                                                <!-- Elements -->
+                                                <li class="nav-item megamenu">
+                                                    <a class="nav-link" href="#"><span>RESERVATION</span></a>
+                                                </li>
+                                            </ul><!-- /End Header menu links -->
+
+                                        </div><!-- /End Header menu (Desktop) -->
+
+
+                                    </div><!-- /End container -->
+
+
+                                    <!-- Header menu (Mobile) -->
+                                    <div class="header-menu mobile-menu collapse" id="mobile-menu">
+                                    </div><!-- /End Header menu (Mobile) -->
+
+
+                                </nav><!-- /End Navbar -->
+                            </div><!-- /End Header menu section container -->
+                        </div><!-- /End Header menu section -->
+
+
+                    </div><!-- /End Header section container -->
+                </header><!-- /End Header section -->
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
