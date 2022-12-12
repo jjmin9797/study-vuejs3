@@ -1,6 +1,12 @@
 <template>
   <div>
-    <h2 align="center">To-Do List</h2>
+    <div class="d-flex justify-content-between mb-3">
+      <h2 align="center">To-Do List</h2>
+      <button class="btn btn-primary"
+      @click="moveToCreatePage"
+      >Create Todo</button>
+    </div>
+    
     <input
       class="form-control mb-3"
       type="text"
@@ -8,7 +14,6 @@
       placeholder="Search"
       @keyup.enter="searchTodo"
     />
-    <TodoSimpleForm @add-todo="addTodo" />
     <div>{{ errorMessage }}</div>
     <div align="center" v-if="!todos.length">추가된 Todo가 없습니다.</div>
     <TodoList
@@ -53,18 +58,15 @@
 
 <script>
 import { ref, computed, watchEffect, watch, onUnmounted } from "vue";
-import TodoSimpleForm from "@/components/TodoSimpleForm.vue";
 import TodoList from "@/components/TodoList.vue";
 import axios from "axios";
 import Toast from "@/components/Toast.vue";
 import { useToast } from '@/composables/toast.js';
+import {useRouter} from 'vue-router';
 export default {
-  components: { TodoSimpleForm, TodoList, Toast },
+  components: { TodoList, Toast },
 
   setup() {
-    onUnmounted(() => {
-      clearTimeout(toastTimeout.value);
-    });
 
     const todos = ref([]);
     const errorMessage = ref("");
@@ -72,6 +74,7 @@ export default {
     const limit = 5;
     const currentPage = ref(1);
     const searchText = ref("");
+    const router = useRouter();
     const {
         toastMessage,
         toastAlertType,
@@ -95,7 +98,11 @@ export default {
     watchEffect(() => {
       console.log(currentPage.value);
     });
-
+    const moveToCreatePage = () => {
+      router.push({
+        name: 'TodoCreate',
+      })
+    };
     const numberOfPages = computed(() => {
       return Math.ceil(numberOfTodos.value / limit);
     });
@@ -191,6 +198,7 @@ export default {
       showToast,
       toastAlertType,
       toastMessage,
+      moveToCreatePage,
     };
   },
 };

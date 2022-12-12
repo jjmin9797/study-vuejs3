@@ -1,4 +1,4 @@
-import {ref} from 'vue';
+import {ref, onUnmounted} from 'vue';
 export const useToast = () => {
     const toastMessage = ref('');
     const toastAlertType = ref('');
@@ -14,6 +14,9 @@ export const useToast = () => {
           showToast.value = false;
         }, 3000);
       };
+      onUnmounted(() => {
+        clearTimeout(timeout.value);
+      });
       return {
         toastMessage,
         toastAlertType,

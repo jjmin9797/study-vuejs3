@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
+import router from './router';
 // require('@/assets/js/vendor/bootstrap/css/bootstrap.min.css')
 // require('@/assets/fonts/fontawesome/css/all.min.css')
 // require('@/assets/js/plugins/fancybox/css/jquery.fancybox.min.css')
@@ -43,4 +43,4 @@ import App from './App.vue'
 // require('@/assets/js/scripts.js')
 
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
