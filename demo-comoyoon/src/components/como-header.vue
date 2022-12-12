@@ -52,7 +52,6 @@
                   <li class="nav-item">
                     <router-link
                       class="nav-link"
-                      aria-current="page"
                       :to="{ name: 'Main' }"
                       ><span>HOME</span></router-link
                     >
@@ -61,7 +60,6 @@
                   <li class="nav-item">
                     <router-link
                       class="nav-link"
-                      aria-current="page"
                       :to="{ name: 'AboutUs' }"
                       ><span>ABOUT US</span></router-link
                     >
