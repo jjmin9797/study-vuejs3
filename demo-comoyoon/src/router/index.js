@@ -5,6 +5,9 @@ import Promotion from '@/pages/promotion/como-promotion';
 import PromotionDetail from '@/pages/promotion/como-promotion-detail';
 import Flower from '@/pages/flower/como-flower';
 import FlowerDetail from '@/pages/flower/como-flower-detail';
+import Dessert from '@/pages/dessert/como-dessert';
+import Reservation from '@/pages/reservation/como-reservation';
+import ErrorPage from '@/pages/como-notfound-error';
 
 
 
@@ -28,6 +31,11 @@ const router = createRouter({
             component: Promotion
         },
         {
+            path: '/reservation',
+            name: 'Reservation',
+            component: Reservation
+        },
+        {
             path: '/promotionDetail',
             name: 'PromotionDetail',
             component: PromotionDetail
@@ -38,13 +46,18 @@ const router = createRouter({
             component: Flower
         },
         {
+            path: '/dessert',
+            name: 'Dessert',
+            component: Dessert
+        },
+        {
             path: '/flowerDetail',
             name: 'FlowerDetail',
             component: FlowerDetail
         },
         {
-            path: '/:any',
-            component: Main
+            path: '/:catchAll(.*)',
+            component: ErrorPage
         },
 
         

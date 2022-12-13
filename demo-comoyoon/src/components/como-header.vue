@@ -6,7 +6,7 @@
       header-section-transparent
       header-section-transparent-light
     "
-    id = "we"
+    id="we"
   >
     <!-- Header section container -->
     <div class="header-section-container">
@@ -20,15 +20,13 @@
             <div class="container gx-4">
               <!-- Logo -->
               <a class="navbar-brand" href="index.html" title="COMO">
-
                 <div class="transparent" alt="COMO">
-                  <h4 class="font-weight-900"  style="color: white">COMOYOON</h4>
+                  <h4 class="font-weight-900" style="color: white">COMOYOON</h4>
                 </div>
                 <div class="normal" alt="COMO" style="color: black">
                   <h4 class="font-weight-900">COMOYOON</h4>
-                </div> 
-
-                </a>
+                </div>
+              </a>
               <!-- /End Logo -->
 
               <!-- Toggler button -->
@@ -54,52 +52,43 @@
                 <ul class="navbar-nav ms-auto">
                   <!-- Home -->
                   <li class="nav-item">
-                    <router-link
-                      class="nav-link"
-                      :to="{ name: 'Main' }"
+                    <router-link class="nav-link" :to="{ name: 'Main' }"
                       ><span>HOME</span></router-link
                     >
                   </li>
                   <!-- Portfolio -->
                   <li class="nav-item">
-                    <router-link
-                      class="nav-link"
-                      :to="{ name: 'AboutUs' }"
+                    <router-link class="nav-link" :to="{ name: 'AboutUs' }"
                       ><span>ABOUT US</span></router-link
                     >
                   </li>
 
                   <!-- Shop -->
                   <li class="nav-item">
-                    <router-link
-                      class="nav-link"
-                      :to="{ name: 'Promotion' }"
+                    <router-link class="nav-link" :to="{ name: 'Promotion' }"
                       ><span>PROMOTION</span></router-link
                     >
                   </li>
 
                   <!-- Blog -->
                   <li class="nav-item">
-                    <router-link
-                      class="nav-link"
-                      :to="{ name: 'Flower' }"
+                    <router-link class="nav-link" :to="{ name: 'Flower' }"
                       ><span>FLOWER</span></router-link
                     >
                   </li>
 
                   <!-- Pages -->
                   <li class="nav-item megamenu">
-                    <a class="nav-link" href="#"><span>DESSERT</span></a>
-                  </li>
-
-                  <!-- Features -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><span>STORE</span></a>
+                    <router-link class="nav-link" :to="{ name: 'Dessert' }"
+                      ><span>DESSERT</span></router-link
+                    >
                   </li>
 
                   <!-- Elements -->
                   <li class="nav-item megamenu">
-                    <a class="nav-link" href="#"><span>RESERVATION</span></a>
+                    <router-link class="nav-link" :to="{ name: 'Reservation' }"
+                      ><span>RESERVATION</span></router-link
+                    >
                   </li>
                 </ul>
                 <!-- /End Header menu links -->

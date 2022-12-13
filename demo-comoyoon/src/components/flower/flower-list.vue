@@ -172,6 +172,11 @@
 <script>
 import {useRouter} from 'vue-router';
 export default {
+    props:{
+        category: {
+            type: String,
+        }
+    },
     setup() {
         const router = useRouter();
         const moveToFlowerDetail = (flowerId) => {

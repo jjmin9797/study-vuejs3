@@ -1,6 +1,6 @@
 <template>
   <FlowerHeader :headerName="`Flower`"/>
-  <FlowerList/>
+  <FlowerList :category="`Flower`"/>
 </template>
 
 <script>

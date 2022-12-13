@@ -73,8 +73,6 @@
                               data-page-direction="ltr"
                               data-owl-slider-thumbnail="no"
                             >
-                              
-
                               <!-- Slider item -->
                               <div class="owl-slider-item">
                                 <!-- Image block -->
@@ -94,7 +92,7 @@
                                       "
                                     >
                                       <a
-                                        href="assets/images/shop/013.jpg"
+                                        href="assets/images/comoyoon/flower/flower-1.jpg"
                                         data-lightbox="gallery-1"
                                         data-lightbox-caption="Elegant handbag"
                                       >
@@ -113,8 +111,6 @@
                               <!-- /End Slider item -->
                             </div>
                             <!-- /End Slider block -->
-
-
                           </div>
                           <!-- /End Block header -->
                         </div>
@@ -292,7 +288,6 @@
                                     >
                                       Specifications
                                     </button>
-
                                     
                                   </div>
                                   <!-- /End Nav tabs -->
@@ -383,8 +378,6 @@
                                     </div>
                                   </div>
                                   <!-- /End Content 2 -->
-
-                                  
                                 </div>
                                 <!-- /End Content -->
                               </div>
@@ -417,8 +410,6 @@
     <!-- /End container -->
   </div>
   <!-- /End Page body -->
-
-
 </template>
 
 <script>
