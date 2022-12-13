@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+
 // require('@/assets/js/vendor/bootstrap/css/bootstrap.min.css')
 // require('@/assets/fonts/fontawesome/css/all.min.css')
 // require('@/assets/js/plugins/fancybox/css/jquery.fancybox.min.css')
@@ -12,23 +13,23 @@ import router from './router';
 // require('@/assets/css/animate/animate.min.css')
 // require('@/assets/css/style.css')
 // require('@/assets/css/custom.css')
-//require('@/')
+// require('@/')
 // require('@/assets/images/favicon/favicon-32x32.png')
 // require('@/assets/images/favicon/favicon-192x192.png')
 // require('@/assets/images/favicon/favicon-180x180.png')
 // require('@/assets/images/favicon/favicon-270x270.png')
 // require('@/assets/images/shop/005-42x67.jpg')
 
-//require('@/assets/js/vendor/jquery/jquery-3.6.0.min.js')
-//require('@/assets/js/vendor/jquery/jquery-ui.min.js')
-//require('@/assets/js/vendor/bootstrap/js/bootstrap.bundle.min.js')
-//require('@/assets/js/plugins/animsition/js/animsition.min.js')
-//require('@/assets/js/plugins/appear/jquery.appear.min.js')
-//require('@/assets/js/plugins/countto/jquery.countTo.min.js')
-//require('@/assets/js/plugins/downcount/jquery.downCount.min.js')
-//require('@/assets/js/plugins/easy-pie-chart/jquery.easypiechart.min.js')
-//require('@/assets/js/plugins/fancybox/js/jquery.fancybox.min.js')
-//require('@/assets/js/plugins/fitvids/jquery.fitvids.min.js')
+// require('@/assets/js/vendor/jquery/jquery-3.6.0.min.js')
+// require('@/assets/js/vendor/jquery/jquery-ui.min.js')
+// require('@/assets/js/vendor/bootstrap/js/bootstrap.bundle.min.js')
+// require('@/assets/js/plugins/animsition/js/animsition.min.js')
+// require('@/assets/js/plugins/appear/jquery.appear.min.js')
+// require('@/assets/js/plugins/countto/jquery.countTo.min.js')
+// require('@/assets/js/plugins/downcount/jquery.downCount.min.js')
+// require('@/assets/js/plugins/easy-pie-chart/jquery.easypiechart.min.js')
+// require('@/assets/js/plugins/fancybox/js/jquery.fancybox.min.js')
+// require('@/assets/js/plugins/fitvids/jquery.fitvids.min.js')
 // require('@/assets/js/plugins/isotope/isotope.pkgd.min.js')
 // require('@/assets/js/plugins/mediaelementplayer/js/mediaelement-and-player.min.js')
 // require('@/assets/js/plugins/owl-carousel/owl.carousel.min.js')
@@ -39,7 +40,7 @@ import router from './router';
 // require('@/assets/js/plugins/tweetie/tweetie.min.js')
 // require('@/assets/js/plugins/twenty-twenty/js/twentytwenty.min.js')
 // require('@/assets/js/plugins/typed/typed.min.js')
-// //require('@/assets/js/plugins/validation/jquery.validate.min.js')
+// require('@/assets/js/plugins/validation/jquery.validate.min.js')
 // require('@/assets/js/scripts.js')
 
 

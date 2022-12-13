@@ -6,6 +6,7 @@
       header-section-transparent
       header-section-transparent-light
     "
+    id = "we"
   >
     <!-- Header section container -->
     <div class="header-section-container">
@@ -18,14 +19,17 @@
             <!-- container -->
             <div class="container gx-4">
               <!-- Logo -->
-              <a class="navbar-brand" href="index.html" title="Bason">
-                <h4 class="font-weight-900 transparent" style="color: white">
-                  COMO YOON
-                </h4>
-                <h4 class="font-weight-900 normal center" style="color: black">
-                  COMO YOON
-                </h4> </a
-              ><!-- /End Logo -->
+              <a class="navbar-brand" href="index.html" title="COMO">
+
+                <div class="transparent" alt="COMO">
+                  <h4 class="font-weight-900"  style="color: white">COMOYOON</h4>
+                </div>
+                <div class="normal" alt="COMO" style="color: black">
+                  <h4 class="font-weight-900">COMOYOON</h4>
+                </div> 
+
+                </a>
+              <!-- /End Logo -->
 
               <!-- Toggler button -->
               <button
@@ -67,17 +71,25 @@
 
                   <!-- Shop -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><span>PROMOTION</span></a>
+                    <router-link
+                      class="nav-link"
+                      :to="{ name: 'Promotion' }"
+                      ><span>PROMOTION</span></router-link
+                    >
                   </li>
 
                   <!-- Blog -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><span>FLOWER</span></a>
+                    <router-link
+                      class="nav-link"
+                      :to="{ name: 'Flower' }"
+                      ><span>FLOWER</span></router-link
+                    >
                   </li>
 
                   <!-- Pages -->
                   <li class="nav-item megamenu">
-                    <a class="nav-link" href="#"><span>PRODUCT</span></a>
+                    <a class="nav-link" href="#"><span>DESSERT</span></a>
                   </li>
 
                   <!-- Features -->
